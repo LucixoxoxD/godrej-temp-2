@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f0f10" />
+  <title>Godrej Astra Heights | Golf Course Road, Gurugram</title>
+  <meta name="description" content="Godrej Astra Heights — a fictional ultra-luxury pre-launch residence on Golf Course Road, Gurugram. 3 BHK + Utility, 4 BHK + Penthouse, from ₹8.5 Cr onwards." />
+  <style>
+    :root{
+      --bg:#0d0d0e;
+      --bg2:#121213;
+      --panel:rgba(255,255,255,.06);
+      --panel2:rgba(255,255,255,.09);
+      --text:#f5f0e8;
+      --muted:rgba(245,240,232,.72);
+      --gold:#d7b56d;
+      --gold2:#b88d41;
+      --ivory:#f9f5ef;
+      --line:rgba(255,255,255,.12);
+      --shadow:0 24px 80px rgba(0,0,0,.35);
+      --shadow2:0 18px 42px rgba(0,0,0,.24);
+      --radius:28px;
+      --max:1280px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(215,181,109,.12), transparent 45%),
+        radial-gradient(900px 600px at 80% 15%, rgba(255,255,255,.08), transparent 35%),
+        linear-gradient(180deg, #0a0a0b 0%, #101011 45%, #0b0b0c 100%);
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max), calc(100% - 40px)); margin:0 auto;}
+    .serif{font-family: "Cormorant Garamond", Georgia, serif; letter-spacing:.2px}
+    .eyebrow{font-size:.78rem; letter-spacing:.28em; text-transform:uppercase; color:var(--gold);}
+    .section{padding:104px 0; position:relative;}
+    .section.alt{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));}
+    .grid{display:grid; gap:24px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.04);
+      color:var(--text); padding:14px 20px; border-radius:999px;
+      font-weight:600; letter-spacing:.01em; cursor:pointer; transition:.3s ease;
+      backdrop-filter: blur(18px);
+    }
+    .btn:hover{transform:translateY(-2px); background:rgba(255,255,255,.09); border-color:rgba(215,181,109,.45)}
+    .btn.gold{background:linear-gradient(135deg, var(--gold), #f1d7a0); color:#1b1a18; border-color:transparent}
+    .btn.gold:hover{filter:brightness(1.02)}
+    .btn.ghost{background:transparent}
+    .tag{
+      display:inline-flex; align-items:center; gap:8px; padding:9px 14px; border-radius:999px;
+      background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); color:var(--muted);
+      font-size:.86rem; backdrop-filter: blur(12px);
+    }
+    .shine{position:relative; overflow:hidden}
+    .shine:after{
+      content:""; position:absolute; inset:-120% -60%;
+      background:linear-gradient(120deg, transparent 35%, rgba(255,255,255,.16) 48%, transparent 58%);
+      transform:translateX(-20%); transition:transform .8s ease;
+      pointer-events:none;
+    }
+    .shine:hover:after{transform:translateX(55%)}
+    /* NAV */
+    .nav-wrap{
+      position:fixed; inset:18px 0 auto; z-index:1200; pointer-events:none;
+    }
+    .nav{
+      width:min(var(--max), calc(100% - 24px)); margin:0 auto; pointer-events:auto;
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      padding:14px 18px; border-radius:999px;
+      background:rgba(12,12,13,.45); backdrop-filter: blur(18px);
+      border:1px solid rgba(255,255,255,.12); box-shadow: var(--shadow2);
+      transition:.35s ease;
+    }
+    .nav.scrolled{background:rgba(10,10,10,.72); border-color:rgba(255,255,255,.08)}
+    .brand{display:flex; align-items:center; gap:12px; min-width:0}
+    .mark{
+      width:42px; height:42px; border-radius:14px; display:grid; place-items:center;
+      background:linear-gradient(135deg, rgba(215,181,109,.35), rgba(255,255,255,.06));
+      border:1px solid rgba(215,181,109,.35); box-shadow: inset 0 1px 0 rgba(255,255,255,.12);
+      font-family:"Cormorant Garamond",serif; font-size:1.55rem; color:#fff;
+    }
+    .brand h1{margin:0; font:600 .95rem Inter, sans-serif; letter-spacing:.13em; text-transform:uppercase; white-space:nowrap}
+    .brand small{display:block; color:var(--muted); font-size:.72rem; letter-spacing:.12em; margin-top:2px; text-transform:uppercase}
+    .nav-actions{display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .nav-link{color:var(--muted); font-size:.9rem; padding:10px 12px; border-radius:999px; transition:.25s ease}
+    .nav-link:hover{color:var(--text); background:rgba(255,255,255,.06)}
+    .call-pill{display:none}
+    /* HERO */
+    .hero{
+      min-height:100svh; position:relative; display:flex; align-items:stretch; overflow:hidden;
+      padding-top:110px;
+    }
+    .hero-bg{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(8,8,9,.2) 0%, rgba(8,8,9,.8) 70%, rgba(8,8,9,.95) 100%),
+        url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+      transform:scale(1.05);
+      will-change:transform;
+    }
+    .hero::before{
+      content:""; position:absolute; inset:0;
+      background:radial-gradient(1000px 500px at 18% 20%, rgba(215,181,109,.18), transparent 40%);
+      pointer-events:none;
+    }
+    .hero-inner{
+      position:relative; z-index:1; width:min(var(--max), calc(100% - 40px)); margin:0 auto;
+      display:grid; grid-template-columns: 1.15fr .85fr; gap:34px; align-items:center; padding:30px 0 54px;
+    }
+    .hero-copy{max-width:760px}
+    .hero-copy .eyebrow{margin-bottom:18px}
+    .hero h2{
+      margin:0 0 18px; font-size:clamp(3.2rem, 8vw, 7.2rem); line-height:.92; font-weight:500;
+      text-wrap:balance;
+    }
+    .hero p{max-width:680px; color:var(--muted); font-size:1.05rem; line-height:1.8; margin:0 0 28px}
+    .hero-stats{display:flex; flex-wrap:wrap; gap:14px; margin:32px 0 0}
+    .hero-stat{
+      padding:14px 16px; min-width:160px; border-radius:20px;
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.11); backdrop-filter: blur(14px);
+    }
+    .hero-stat strong{display:block; font-size:1.3rem; font-weight:700}
+    .hero-stat span{display:block; color:var(--muted); font-size:.85rem; margin-top:4px}
+    .lead-card{
+      position:relative; border-radius:32px; padding:24px; overflow:hidden;
+      background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.16); box-shadow:var(--shadow);
+      backdrop-filter: blur(24px);
+    }
+    .lead-card h3{margin:0 0 10px; font-size:1.7rem}
+    .lead-card p{margin:0 0 16px; color:var(--muted); line-height:1.7; font-size:.96rem}
+    form{display:grid; gap:12px}
+    .field{position:relative}
+    .field input, .field select, .field textarea{
+      width:100%; padding:15px 16px; border-radius:16px; border:1px solid rgba(255,255,255,.12);
+      background:rgba(7,7,8,.55); color:var(--text); outline:none; font:inherit; backdrop-filter: blur(8px);
+    }
+    .field input::placeholder, .field textarea::placeholder{color:rgba(245,240,232,.48)}
+    .field input:focus, .field select:focus, .field textarea:focus{border-color:rgba(215,181,109,.55); box-shadow:0 0 0 3px rgba(215,181,109,.12)}
+    .submit-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:4px}
+    .micro-note{font-size:.78rem; line-height:1.5; color:rgba(245,240,232,.55)}
+    .floating-cta{
+      position:absolute; right:24px; bottom:24px; z-index:2;
+      display:flex; flex-direction:column; gap:10px; align-items:flex-end;
+    }
+    .floating-badge{
+      padding:11px 14px; border-radius:999px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(10px); color:var(--text); font-size:.88rem;
+    }
+    .countdown{font-variant-numeric:tabular-nums; letter-spacing:.04em;}
+    /* TRUST */
+    .trust{
+      padding:20px 0 18px; border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.02);
+    }
+    .trust-row{display:grid; grid-template-columns:repeat(5, 1fr); gap:16px; align-items:center}
+    .trust-item{display:flex; gap:12px; align-items:center; justify-content:center; color:var(--muted); text-align:left}
+    .trust-icon{width:42px; height:42px; border-radius:14px; display:grid; place-items:center; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08)}
+    .trust-item strong{display:block; color:var(--text)}
+    .trust-item span{display:block; font-size:.85rem}
+    /* GENERAL CARDS */
+    .heading-row{display:flex; justify-content:space-between; align-items:end; gap:18px; margin-bottom:28px}
+    .heading-row h3{margin:10px 0 0; font-size:clamp(2rem, 3.8vw, 3.5rem); line-height:1}
+    .heading-row p{max-width:560px; margin:0; color:var(--muted); line-height:1.75}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow2);
+    }
+    .card-body{padding:24px}
+    /* OVERVIEW */
+    .overview-grid{grid-template-columns: .9fr 1.1fr}
+    .overview-media{
+      min-height:560px; position:relative; overflow:hidden;
+      background:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    }
+    .overview-media::after{
+      content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 30%, rgba(8,8,9,.72) 100%);
+    }
+    .overview-visual{
+      position:absolute; right:22px; bottom:22px; z-index:1; width:min(320px, calc(100% - 44px));
+      padding:18px; border-radius:22px; background:rgba(8,8,9,.45); border:1px solid rgba(255,255,255,.12); backdrop-filter: blur(18px);
+    }
+    .specs{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:18px}
+    .spec{
+      padding:16px; border-radius:18px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09)
+    }
+    .spec small{display:block; color:var(--muted); margin-bottom:6px}
+    .spec strong{font-size:1.07rem}
+    .overview-copy{display:flex; flex-direction:column; gap:18px}
+    .intro-text{font-size:1.08rem; line-height:1.88; color:rgba(245,240,232,.82)}
+    .bullet-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
+    .bullet{
+      padding:16px; border-radius:18px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09)
+    }
+    .bullet strong{display:block; margin-bottom:6px}
+    .bullet span{color:var(--muted); font-size:.94rem; line-height:1.6}
+    /* PRICING */
+    .pricing-grid{grid-template-columns:repeat(3,1fr)}
+    .price-card{position:relative; padding:24px}
+    .price-card.featured{
+      background:linear-gradient(180deg, rgba(215,181,109,.16), rgba(255,255,255,.05));
+      border-color:rgba(215,181,109,.35); transform:translateY(-8px)
+    }
+    .price-top{display:flex; justify-content:space-between; align-items:flex-start; gap:12px}
+    .price-top h4{margin:0; font-size:1.45rem}
+    .ribbon{font-size:.74rem; letter-spacing:.18em; text-transform:uppercase; color:#161311; background:linear-gradient(135deg,#f3dfb0, #d7b56d); padding:7px 10px; border-radius:999px; font-weight:800}
+    .price{font-size:2.4rem; margin:18px 0 6px; line-height:1; font-weight:700}
+    .price small{font-size:1rem; color:var(--muted); font-weight:500}
+    .desc{color:var(--muted); line-height:1.7; margin:10px 0 16px}
+    .price ul{list-style:none; padding:0; margin:18px 0 20px; display:grid; gap:10px}
+    .price li{display:flex; gap:10px; align-items:flex-start; color:rgba(245,240,232,.86)}
+    .tick{width:20px; height:20px; border-radius:50%; display:grid; place-items:center; flex:0 0 20px; background:rgba(215,181,109,.14); color:var(--gold); border:1px solid rgba(215,181,109,.25); font-size:.8rem; margin-top:2px}
+    /* AMENITIES */
+    .amenities{
+      background:
+        radial-gradient(700px 500px at 80% 0%, rgba(215,181,109,.10), transparent 45%),
+        linear-gradient(180deg, #09090a, #111112);
+    }
+    .amenity-grid{grid-template-columns:1.1fr .9fr; align-items:start}
+    .amenity-list{display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
+    .amenity-tile{
+      padding:18px; min-height:140px; border-radius:22px; background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10); transition:transform .3s ease, background .3s ease;
+    }
+    .amenity-tile:hover{transform:translateY(-5px); background:rgba(255,255,255,.08)}
+    .amenity-tile .icon{font-size:1.3rem; margin-bottom:16px; color:var(--gold)}
+    .amenity-tile h4{margin:0 0 8px; font-size:1.12rem}
+    .amenity-tile p{margin:0; color:var(--muted); line-height:1.65; font-size:.93rem}
+    .amenity-hero{
+      min-height:640px; position:relative;
+      background:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    }
+    .amenity-hero::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 15%, rgba(7,7,8,.80) 100%)}
+    .amenity-tag{
+      position:absolute; left:22px; bottom:22px; z-index:1; max-width:320px;
+      padding:18px; border-radius:22px; background:rgba(8,8,9,.45); border:1px solid rgba(255,255,255,.12); backdrop-filter: blur(18px);
+    }
+    /* GALLERY / PLANS */
+    .plan-grid{grid-template-columns:repeat(3,1fr)}
+    .image-card{position:relative; overflow:hidden; min-height:330px}
+    .image-card img{width:100%; height:100%; object-fit:cover; transition:transform .8s ease}
+    .image-card:hover img{transform:scale(1.08)}
+    .image-label{
+      position:absolute; left:18px; right:18px; bottom:18px; z-index:2;
+      padding:14px 16px; border-radius:18px; background:rgba(7,7,8,.56); border:1px solid rgba(255,255,255,.10); backdrop-filter: blur(14px);
+    }
+    .image-label strong{display:block; margin-bottom:4px}
+    .image-label span{display:block; color:var(--muted); font-size:.88rem; line-height:1.5}
+    /* LOCATION */
+    .location-grid{grid-template-columns: .95fr 1.05fr; align-items:start}
+    .map-panel{
+      min-height:650px; padding:26px; position:relative; overflow:hidden;
+      background:
+        radial-gradient(circle at 78% 28%, rgba(215,181,109,.15), transparent 0 10%, transparent 11%),
+        linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+    }
+    .map-box{
+      position:absolute; inset:26px; border-radius:26px; overflow:hidden; border:1px solid rgba(255,255,255,.10);
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255,255,255,.06) 1px, transparent 1px),
+        radial-gradient(circle at 30% 34%, rgba(215,181,109,.22), transparent 12%),
+        radial-gradient(circle at 62% 52%, rgba(215,181,109,.20), transparent 11%),
+        radial-gradient(circle at 78% 24%, rgba(215,181,109,.18), transparent 10%),
+        linear-gradient(135deg, #161617, #0e0e0f);
+      background-size:64px 64px, 64px 64px, auto, auto, auto, auto;
+    }
+    .route{
+      position:absolute; inset:auto 0 42% 12%; height:3px;
+      background:linear-gradient(90deg, transparent, rgba(215,181,109,.95), transparent);
+      box-shadow:0 0 20px rgba(215,181,109,.35);
+      transform:rotate(-14deg);
+      opacity:.7;
+    }
+    .pin{
+      position:absolute; width:18px; height:18px; border-radius:50%; background:var(--gold);
+      box-shadow:0 0 0 8px rgba(215,181,109,.14), 0 0 30px rgba(215,181,109,.4);
+    }
+    .pin.p1{left:22%; top:28%}.pin.p2{left:48%; top:54%}.pin.p3{left:73%; top:24%}.pin.p4{left:79%; top:58%}
+    .map-note{
+      position:absolute; left:24px; right:24px; bottom:24px; padding:18px; border-radius:20px;
+      background:rgba(5,5,5,.58); border:1px solid rgba(255,255,255,.10); backdrop-filter: blur(18px);
+    }
+    .hotspot-list{display:grid; gap:14px}
+    .hotspot{
+      display:flex; justify-content:space-between; gap:18px; align-items:flex-start; padding:18px 18px;
+      border-radius:20px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09)
+    }
+    .hotspot strong{display:block; font-size:1.05rem; margin-bottom:4px}
+    .hotspot span{color:var(--muted); line-height:1.55; font-size:.94rem}
+    .hotspot em{font-style:normal; color:var(--gold); white-space:nowrap; font-weight:700}
+    /* INVEST */
+    .invest-grid{grid-template-columns:repeat(4,1fr)}
+    .metric{
+      padding:22px; border-radius:24px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09)
+    }
+    .metric .num{font-size:2.2rem; font-weight:700; line-height:1; margin-bottom:8px}
+    .metric span{color:var(--muted); line-height:1.6; font-size:.94rem}
+    .story-panel{margin-top:22px; padding:26px; border-radius:28px; background:linear-gradient(135deg, rgba(215,181,109,.10), rgba(255,255,255,.04)); border:1px solid rgba(215,181,109,.18)}
+    .story-panel p{margin:0; color:rgba(245,240,232,.84); line-height:1.82; font-size:1.03rem}
+    /* GALLERY */
+    .gallery-grid{grid-template-columns:1.2fr .8fr .8fr}
+    .gallery-grid .image-card{min-height:260px}
+    .gallery-grid .image-card.large{min-height:540px}
+    /* DEVELOPER */
+    .developer-grid{grid-template-columns: .85fr 1.15fr; align-items:center}
+    .dev-panel{padding:30px}
+    .dev-list{display:grid; gap:12px; margin-top:18px}
+    .dev-row{display:flex; justify-content:space-between; gap:12px; padding:15px 16px; border-radius:18px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09)}
+    .dev-row span{color:var(--muted)}
+    .dev-media{min-height:560px; position:relative; overflow:hidden; background:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat}
+    .dev-media::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 25%, rgba(8,8,9,.72) 100%)}
+    .dev-stamp{position:absolute; left:22px; bottom:22px; z-index:1; padding:18px; border-radius:22px; background:rgba(7,7,8,.5); border:1px solid rgba(255,255,255,.12); backdrop-filter: blur(18px)}
+    /* FAQ */
+    .faq-grid{max-width:920px; margin:0 auto; display:grid; gap:12px}
+    .faq-item{border-radius:22px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09); overflow:hidden}
+    .faq-q{
+      width:100%; text-align:left; padding:20px 22px; display:flex; justify-content:space-between; align-items:center; gap:18px;
+      background:transparent; color:var(--text); border:0; cursor:pointer; font:600 1rem Inter, sans-serif;
+    }
+    .faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease}
+    .faq-a p{margin:0; padding:0 22px 20px; color:var(--muted); line-height:1.75}
+    .faq-item.open .faq-a{max-height:240px}
+    .faq-item.open .chev{transform:rotate(180deg)}
+    .chev{transition:transform .25s ease; color:var(--gold)}
+    /* FINAL CTA */
+    .final-cta{
+      padding:96px 0 126px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.04)),
+        radial-gradient(1000px 500px at 50% 0%, rgba(215,181,109,.14), transparent 55%);
+    }
+    .final-panel{
+      padding:34px; border-radius:34px; border:1px solid rgba(215,181,109,.22);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      box-shadow:var(--shadow);
+      display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center;
+    }
+    .final-panel h3{margin:0 0 10px; font-size:clamp(2.1rem, 4vw, 4rem); line-height:.95}
+    .final-panel p{margin:0; color:var(--muted); line-height:1.8; font-size:1.02rem}
+    .final-actions{display:flex; flex-wrap:wrap; gap:12px; justify-content:flex-end}
+    /* BARS / MODALS */
+    .bottom-bar{
+      position:fixed; left:0; right:0; bottom:0; z-index:1250;
+      display:none; gap:10px; padding:10px; background:rgba(8,8,9,.72); border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(18px);
+    }
+    .bottom-bar .btn{flex:1; padding:13px 12px; border-radius:16px; font-size:.92rem}
+    .floating-whatsapp{
+      position:fixed; right:18px; bottom:92px; z-index:1260; width:58px; height:58px; border-radius:50%;
+      display:grid; place-items:center; box-shadow:0 20px 50px rgba(0,0,0,.34);
+      background:linear-gradient(135deg,#28d146,#0c8f2f); color:white; border:0;
+    }
+    .floating-whatsapp svg{width:28px; height:28px}
+    .modal-backdrop{
+      position:fixed; inset:0; z-index:1300; display:none; place-items:center; padding:18px;
+      background:rgba(0,0,0,.62); backdrop-filter: blur(10px);
+    }
+    .modal{
+      width:min(560px, 100%); border-radius:32px; overflow:hidden; background:linear-gradient(180deg, rgba(18,18,19,.96), rgba(11,11,12,.96));
+      border:1px solid rgba(255,255,255,.12); box-shadow:var(--shadow);
+    }
+    .modal-head{padding:22px 22px 0; display:flex; justify-content:space-between; align-items:center; gap:12px}
+    .modal-head h4{margin:0; font-size:1.6rem}
+    .close{width:42px; height:42px; border-radius:50%; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:var(--text); cursor:pointer}
+    .modal-body{padding:22px}
+    .modal .submit-row .btn{flex:1}
+    .toast{
+      position:fixed; left:50%; bottom:28px; transform:translateX(-50%) translateY(20px);
+      z-index:1400; padding:14px 18px; border-radius:999px; background:rgba(15,15,16,.92);
+      border:1px solid rgba(215,181,109,.3); color:var(--text); box-shadow:var(--shadow2); opacity:0; pointer-events:none; transition:.28s ease;
+    }
+    .toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
+    /* REVEAL */
+    .reveal{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease}
+    .reveal.visible{opacity:1; transform:translateY(0)}
+    /* RESPONSIVE */
+    @media (max-width: 1100px){
+      .hero-inner,.overview-grid,.amenity-grid,.location-grid,.developer-grid,.final-panel{grid-template-columns:1fr}
+      .pricing-grid,.invest-grid,.gallery-grid,.plan-grid{grid-template-columns:repeat(2,1fr)}
+      .trust-row{grid-template-columns:repeat(2,1fr)}
+      .overview-media,.amenity-hero,.dev-media,.map-panel{min-height:480px}
+      .final-actions{justify-content:flex-start}
+    }
+    @media (max-width: 760px){
+      .nav{padding:12px 14px; border-radius:22px; align-items:flex-start}
+      .nav-actions .nav-link{display:none}
+      .call-pill{display:inline-flex}
+      .hero{padding-top:96px}
+      .hero h2{font-size:clamp(2.7rem, 16vw, 4.5rem)}
+      .hero p{font-size:1rem}
+      .specs,.bullet-grid,.amenity-list,.pricing-grid,.invest-grid,.gallery-grid,.plan-grid,.trust-row{grid-template-columns:1fr}
+      .section{padding:76px 0}
+      .heading-row{flex-direction:column; align-items:flex-start}
+      .floating-cta{position:static; margin-top:18px; align-items:flex-start}
+      .bottom-bar{display:flex}
+      .floating-whatsapp{right:14px; bottom:84px}
+      .hero-stat{min-width:unset; flex:1 1 145px}
+      .final-panel{padding:24px}
+    }
+    @media (max-width: 520px){
+      .container{width:min(var(--max), calc(100% - 24px));}
+      .nav-wrap{top:10px}
+      .nav{gap:10px}
+      .brand h1{font-size:.84rem}
+      .brand small{display:none}
+      .lead-card,.card-body,.price-card,.dev-panel,.modal-body,.modal-head,.final-panel{padding-left:18px; padding-right:18px}
+      .image-card.large{min-height:360px}
+      .overview-media,.amenity-hero,.dev-media,.map-panel{min-height:380px}
+      .price{font-size:2rem}
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="nav-wrap">
+    <nav class="nav" id="navbar">
+      <div class="brand">
+        <div class="mark">A</div>
+        <div>
+          <h1>Godrej Astra Heights</h1>
+          <small>Golf Course Road · Sector 53 · Gurugram</small>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a class="nav-link" href="#overview">Overview</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
+        <a class="nav-link" href="#location">Location</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="btn ghost call-pill" href="tel:+919999999999">Call Now</a>
+        <button class="btn gold" data-open-modal="leadModal">Request Price</button>
+      </div>
+    </nav>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-inner">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">Pre-Launch Private Residences</div>
+        <h2 class="serif">A New Standard of Sky-High Luxury on Golf Course Road.</h2>
+        <p>
+          Discover an address crafted for a rare buyer profile — elevated privacy, dramatic skyline panoramas,
+          and a lifestyle shaped by concierge-led service, wellness, and architectural refinement.
+          <strong style="color:#fff">Godrej Astra Heights</strong> is designed to impress first, and convert qualified interest instantly.
+        </p>
+        <div class="submit-row">
+          <button class="btn gold shine" data-open-modal="leadModal">Download Brochure</button>
+          <a class="btn" href="#pricing">View Pricing</a>
+          <a class="btn ghost" href="#gallery">Explore Gallery</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>₹8.5 Cr+</strong><span>Starting Price</span></div>
+          <div class="hero-stat"><strong>7.5 Acres</strong><span>Land Parcel</span></div>
+          <div class="hero-stat"><strong>G+36</strong><span>Iconic Towers</span></div>
+          <div class="hero-stat"><strong>Golf Views</strong><span>Elite Skyline Outlook</span></div>
+        </div>
+      </div>
+
+      <aside class="lead-card reveal" id="leadCard">
+        <div class="tag" style="margin-bottom:14px;">⏳ Pre-launch offer closes in <span class="countdown" id="countdown">47:59:59</span></div>
+        <h3 class="serif">Reserve priority access</h3>
+        <p>Get current inventory, price sheet, floor plans and the best available stack before public allocation opens.</p>
+        <form id="heroForm">
+          <div class="field"><input type="text" name="name" placeholder="Your Name" required></div>
+          <div class="field"><input type="tel" name="phone" placeholder="Mobile Number" required></div>
+          <div class="field">
+            <select name="config" required>
+              <option value="">Select Configuration</option>
+              <option>3 BHK + Utility</option>
+              <option>4 BHK</option>
+              <option>Penthouse</option>
+            </select>
+          </div>
+          <div class="submit-row">
+            <button class="btn gold shine" type="submit">Get Call Back</button>
+            <button class="btn" type="button" data-open-modal="brochureModal">Brochure</button>
+          </div>
+          <div class="micro-note">By submitting, you agree to be contacted by our sales team via call, WhatsApp, SMS or email.</div>
+        </form>
+      </aside>
+    </div>
+    <div class="floating-cta">
+      <div class="floating-badge">Private elevator lobby · 50 ft viewing decks</div>
+      <div class="floating-badge">Infinity sky pool · Concierge services</div>
+    </div>
+  </header>
+
+  <section class="trust">
+    <div class="container">
+      <div class="trust-row reveal">
+        <div class="trust-item"><div class="trust-icon">✓</div><div><strong>Godrej Properties</strong><span>Trusted brand legacy</span></div></div>
+        <div class="trust-item"><div class="trust-icon">✦</div><div><strong>New / Pre Launch</strong><span>Early inventory advantage</span></div></div>
+        <div class="trust-item"><div class="trust-icon">◌</div><div><strong>Luxury Finishes</strong><span>Imported materials & smart living</span></div></div>
+        <div class="trust-item"><div class="trust-icon">⟡</div><div><strong>Prime Location</strong><span>Golf Course Road, Sector 53</span></div></div>
+        <div class="trust-item"><div class="trust-icon">☎</div><div><strong>Instant Assistance</strong><span>Lead response in minutes</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="heading-row reveal">
+        <div>
+          <div class="eyebrow">Project Overview</div>
+          <h3 class="serif">Editorially composed for discerning end-users and investors.</h3>
+        </div>
+        <p>
+          A landmark residential launch by Godrej Properties that blends architectural drama, club-class social spaces,
+          and a highly selective sense of privacy. Every touchpoint is designed to elevate aspiration and sharpen intent.
+        </p>
+      </div>
+
+      <div class="grid overview-grid">
+        <div class="card overview-media reveal">
+          <div class="overview-visual">
+            <div class="tag" style="margin-bottom:12px;">Project Snapshot</div>
+            <div style="display:grid; gap:8px; font-size:.96rem; color:rgba(245,240,232,.84)">
+              <div><strong>Location:</strong> Golf Course Road, Sector 53, Gurugram</div>
+              <div><strong>Configuration:</strong> 3 BHK + Utility, 4 BHK, Penthouse</div>
+              <div><strong>Price:</strong> ₹8.5 Cr onwards</div>
+              <div><strong>Status:</strong> New Launch / Pre Launch</div>
+            </div>
+          </div>
+        </div>
+        <div class="card card-body overview-copy reveal">
+          <div class="intro-text">
+            This is not positioned as a commodity apartment offering. It is curated as a premium address for buyers who value
+            privacy, elevation, and a polished lifestyle narrative. The master planning, façade language, amenities, and
+            interiors are all designed to create emotional momentum that turns browsing into enquiry.
+          </div>
+          <div class="specs">
+            <div class="spec"><small>Land Parcel</small><strong>7.5 Acres</strong></div>
+            <div class="spec"><small>Towers</small><strong>5 Iconic Towers</strong></div>
+            <div class="spec"><small>Height</small><strong>G+36 Floors</strong></div>
+            <div class="spec"><small>Planning</small><strong>Privacy-first stacks</strong></div>
+          </div>
+          <div class="bullet-grid">
+            <div class="bullet"><strong>Private arrival experience</strong><span>Dedicated drop-offs, layered security, and a premium first impression from the lobby onwards.</span></div>
+            <div class="bullet"><strong>Sky-centric lifestyle</strong><span>50 ft viewing decks and elevated lounges create a resort-like presence above the city.</span></div>
+            <div class="bullet"><strong>Smart living standard</strong><span>Home automation, VRV air conditioning, and contemporary systems simplify everyday luxury.</span></div>
+            <div class="bullet"><strong>Signature social club</strong><span>Double-height clubhouse, rooftop lounge, and wellness zones anchor community value.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="pricing">
+    <div class="container">
+      <div class="heading-row reveal">
+        <div>
+          <div class="eyebrow">Price Positioning</div>
+          <h3 class="serif">Luxury pricing that frames urgency and premium scarcity.</h3>
+        </div>
+        <p>Use these as lead magnets. Each card is written to push the visitor toward a form submission, callback, or site visit.</p>
+      </div>
+      <div class="grid pricing-grid">
+        <article class="card price-card reveal">
+          <div class="price-top"><h4>3 BHK + Utility</h4><span class="ribbon">Most Enquired</span></div>
+          <div class="price">₹8.5 Cr <small>onwards</small></div>
+          <div class="desc">Ideal for buyers looking for a spacious premium home with an efficient luxury layout and long-term appreciation potential.</div>
+          <ul>
+            <li><span class="tick">✓</span>Family-friendly planning with utility space</li>
+            <li><span class="tick">✓</span>Privacy-led tower configuration</li>
+            <li><span class="tick">✓</span>Entry point into an elite address</li>
+          </ul>
+          <button class="btn gold shine" data-open-modal="leadModal">Request Price</button>
+        </article>
+        <article class="card price-card featured reveal">
+          <div class="price-top"><h4>4 BHK</h4><span class="ribbon">Priority Choice</span></div>
+          <div class="price">₹11.75 Cr <small>approx.</small></div>
+          <div class="desc">The flagship family residence with wider entertaining spaces, elevated views, and the strongest balance of prestige and utility.</div>
+          <ul>
+            <li><span class="tick">✓</span>Statement residence for high-net-worth buyers</li>
+            <li><span class="tick">✓</span>Elegant flow between living and private zones</li>
+            <li><span class="tick">✓</span>Better resale and rental story</li>
+          </ul>
+          <button class="btn gold shine" data-open-modal="leadModal">Book Site Visit</button>
+        </article>
+        <article class="card price-card reveal">
+          <div class="price-top"><h4>Penthouse</h4><span class="ribbon">Ultra Rare</span></div>
+          <div class="price">On Request <small>limited release</small></div>
+          <div class="desc">For buyers seeking the pinnacle of exclusivity, a penthouse delivers privacy, grandeur, and the most commanding skyline presence.</div>
+          <ul>
+            <li><span class="tick">✓</span>Top-floor lifestyle with elevated prestige</li>
+            <li><span class="tick">✓</span>Designed for truly selective ownership</li>
+            <li><span class="tick">✓</span>Best suited for bespoke negotiations</li>
+          </ul>
+          <button class="btn gold shine" data-open-modal="leadModal">Check Availability</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section amenities" id="amenities">
+    <div class="container">
+      <div class="heading-row reveal">
+        <div>
+          <div class="eyebrow">Amenity Universe</div>
+          <h3 class="serif">A private resort experience, layered with modern status symbols.</h3>
+        </div>
+        <p>Dark, atmospheric, and elegant — the section that makes the project feel worth a premium before the form is even seen.</p>
+      </div>
+      <div class="grid amenity-grid">
+        <div class="amenity-list reveal">
+          <div class="amenity-tile"><div class="icon">🏊</div><h4>Infinity Sky Pool</h4><p>An elevated leisure statement designed for panoramic relaxation and high-impact imagery.</p></div>
+          <div class="amenity-tile"><div class="icon">🛎️</div><h4>Concierge Services</h4><p>Premium service-led living that amplifies convenience and everyday comfort.</p></div>
+          <div class="amenity-tile"><div class="icon">🌿</div><h4>Zen Gardens</h4><p>Quiet, wellness-infused open spaces for decompression and mindful luxury.</p></div>
+          <div class="amenity-tile"><div class="icon">🧘</div><h4>Wellness Pavilion</h4><p>Fitness, recovery, and balance — positioned as a lifestyle differentiator.</p></div>
+          <div class="amenity-tile"><div class="icon">🌇</div><h4>Rooftop Lounge</h4><p>A high-social-value destination for sunsets, gatherings, and executive entertaining.</p></div>
+          <div class="amenity-tile"><div class="icon">🪨</div><h4>Imported Marble Flooring</h4><p>A premium material cue that instantly reinforces the luxury proposition.</p></div>
+          <div class="amenity-tile"><div class="icon">🏢</div><h4>Double Height Clubhouse</h4><p>An arrival and social zone designed to feel grand, contemporary, and memorable.</p></div>
+          <div class="amenity-tile"><div class="icon">🎛️</div><h4>VRV + Automation</h4><p>Smart-home comfort and climate control for a seamless modern ownership experience.</p></div>
+        </div>
+        <div class="card amenity-hero reveal">
+          <div class="amenity-tag">
+            <div class="eyebrow" style="margin-bottom:10px;">Luxury Signature</div>
+            <h4 class="serif" style="margin:0 0 10px; font-size:2rem">A residential atmosphere built to feel private, polished and deeply premium.</h4>
+            <p style="margin:0; color:var(--muted); line-height:1.75">Ideal for buyers who want a statement home, not just square footage. The amenity mix supports aspiration, conversation value, and premium positioning in the market.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="plans">
+    <div class="container">
+      <div class="heading-row reveal">
+        <div>
+          <div class="eyebrow">Master Plan & Floor Plans</div>
+          <h3 class="serif">A gallery that communicates scale, clarity, and exclusivity.</h3>
+        </div>
+        <p>Use the visual rhythm of premium layouts and plan cards to make the user feel the project is already in demand.</p>
+      </div>
+      <div class="grid plan-grid">
+        <div class="card image-card reveal large">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="Master plan visual" />
+          <div class="image-label"><strong>Master Plan Perspective</strong><span>Thoughtful tower placement with open space, privacy buffers, and a luxury arrival sequence.</span></div>
+        </div>
+        <div class="card image-card reveal">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80" alt="3 BHK floor plan visual" />
+          <div class="image-label"><strong>3 BHK + Utility</strong><span>Functional, elegant, and tailored for premium family living.</span></div>
+        </div>
+        <div class="card image-card reveal">
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80" alt="Penthouse visual" />
+          <div class="image-label"><strong>Penthouse Preview</strong><span>Rare top-tier planning for uncompromised living and privacy.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="location">
+    <div class="container">
+      <div class="heading-row reveal">
+        <div>
+          <div class="eyebrow">Location Advantage</div>
+          <h3 class="serif">Gurugram’s most aspirational corridor, mapped for convenience and status.</h3>
+        </div>
+        <p>The layout is designed to feel like an elite hotspot map — premium, strategic, and reassuring for high-ticket buyers.</p>
+      </div>
+      <div class="grid location-grid">
+        <div class="card map-panel reveal">
+          <div class="map-box">
+            <div class="route"></div>
+            <div class="pin p1"></div><div class="pin p2"></div><div class="pin p3"></div><div class="pin p4"></div>
+            <div class="map-note">
+              <div class="eyebrow" style="margin-bottom:10px;">Golf Course Road / Sector 53</div>
+              <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; color:rgba(245,240,232,.82)">
+                <span>Elite social infrastructure</span><span>Corporate access</span><span>Strong rental appeal</span><span>High appreciation zone</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hotspot-list reveal">
+          <div class="hotspot"><div><strong>Cyber City & Business Hubs</strong><span>Ideal for CXOs, founders and global professionals seeking reduced commute friction.</span></div><em>20–25 min</em></div>
+          <div class="hotspot"><div><strong>Luxury Hospitality & Dining</strong><span>Fine dining, clubs, and premium experiences that reinforce the locality’s status.</span></div><em>Nearby</em></div>
+          <div class="hotspot"><div><strong>Top Schools & Healthcare</strong><span>Family confidence rises when elite education and healthcare are already established.</span></div><em>Short Drive</em></div>
+          <div class="hotspot"><div><strong>Golf Course Road Identity</strong><span>One of the most recognisable premium residential addresses in Gurugram.</span></div><em>Prime</em></div>
+          <div class="hotspot"><div><strong>Future Value Story</strong><span>Scarcity on this corridor supports pricing power and long-term ownership confidence.</span></div><em>Strong</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="invest">
+    <div class="container">
+      <div class="heading-row reveal">
+        <div>
+          <div class="eyebrow">Why Invest Now</div>
+          <h3 class="serif">The pre-launch window is where premium upside is typically captured.</h3>
+        </div>
+        <p>Use this section to convert investor-minded visitors by highlighting scarcity, pricing progression, and brand confidence.</p>
+      </div>
+      <div class="grid invest-grid">
+        <div class="metric reveal"><div class="num">01</div><span>Pre-launch pricing creates a better entry position than later stage market rates.</span></div>
+        <div class="metric reveal"><div class="num">02</div><span>Golf Course Road remains a high-demand luxury micro-market with limited premium supply.</span></div>
+        <div class="metric reveal"><div class="num">03</div><span>Godrej Properties brings trust, execution credibility, and brand-led resale confidence.</span></div>
+        <div class="metric reveal"><div class="num">04</div><span>Luxury inventory in the right location often attracts both end-users and long-term investors.</span></div>
+      </div>
+      <div class="story-panel reveal">
+        <p>
+          For serious buyers, timing matters. A well-positioned launch in a prime corridor can outperform a late-entry decision by offering stronger selection,
+          better negotiating power, and a more compelling long-term ownership story. This is exactly where an inquiry form can turn curiosity into action.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="gallery">
+    <div class="container">
+      <div class="heading-row reveal">
+        <div>
+          <div class="eyebrow">Premium Image Gallery</div>
+          <h3 class="serif">A visual rhythm built to sell aspiration before specifics.</h3>
+        </div>
+        <p>Large visuals, hover zoom, and editorial spacing all reinforce the custom-made feel expected from a premium launch microsite.</p>
+      </div>
+      <div class="grid gallery-grid">
+        <div class="card image-card reveal large"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80" alt="Luxury residence exterior" /><div class="image-label"><strong>Signature Arrival</strong><span>An elevated façade presence that feels unmistakably premium.</span></div></div>
+        <div class="card image-card reveal"><img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80" alt="Luxury interior" /><div class="image-label"><strong>Grand Living</strong><span>Elegant interiors aligned to modern luxury expectations.</span></div></div>
+        <div class="card image-card reveal"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Luxury bedroom" /><div class="image-label"><strong>Private Sanctuary</strong><span>Quiet, refined and designed around comfort.</span></div></div>
+        <div class="card image-card reveal"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" alt="Luxury lounge" /><div class="image-label"><strong>Club-Like Social Spaces</strong><span>High-value leisure zones that support the premium positioning.</span></div></div>
+        <div class="card image-card reveal"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Luxury hallway" /><div class="image-label"><strong>Refined Detailing</strong><span>A curated material palette with quiet sophistication.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="developer">
+    <div class="container">
+      <div class="heading-row reveal">
+        <div>
+          <div class="eyebrow">Developer Legacy</div>
+          <h3 class="serif">The confidence of a known brand, translated into a premium buying decision.</h3>
+        </div>
+        <p>Brand trust is a conversion asset. This section uses it as reassurance for buyers who need one final push.</p>
+      </div>
+      <div class="grid developer-grid">
+        <div class="card dev-panel reveal">
+          <div class="tag">Godrej Properties</div>
+          <h4 class="serif" style="font-size:2rem; margin:16px 0 10px">A legacy of execution, design discipline, and long-term value creation.</h4>
+          <p style="color:var(--muted); line-height:1.8; margin:0">
+            Backed by a brand associated with quality and scale, this launch benefits from the confidence buyers expect at the premium end of the market.
+            From planning to handover, the proposition is supported by credibility — a powerful ingredient in high-value real estate conversion.
+          </p>
+          <div class="dev-list">
+            <div class="dev-row"><strong>Brand reputation</strong><span>High trust factor</span></div>
+            <div class="dev-row"><strong>Delivery mindset</strong><span>Execution-focused</span></div>
+            <div class="dev-row"><strong>Value perception</strong><span>Premium market fit</span></div>
+            <div class="dev-row"><strong>Buyer confidence</strong><span>Strong support for decision-making</span></div>
+          </div>
+        </div>
+        <div class="card dev-media reveal">
+          <div class="dev-stamp">
+            <div class="eyebrow" style="margin-bottom:10px;">Built for confidence</div>
+            <div class="serif" style="font-size:1.9rem; line-height:1.05">Trust becomes the final luxury.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="faq">
+    <div class="container">
+      <div class="heading-row reveal" style="justify-content:center; text-align:center; flex-direction:column; align-items:center; margin-bottom:30px">
+        <div class="eyebrow">Frequently Asked Questions</div>
+        <h3 class="serif">The objections section, handled elegantly.</h3>
+        <p>Use concise answers to reduce friction and nudge the visitor back toward the form.</p>
+      </div>
+      <div class="faq-grid reveal">
+        <div class="faq-item open">
+          <button class="faq-q">Is this a new launch or pre-launch project? <span class="chev">⌄</span></button>
+          <div class="faq-a"><p>Godrej Astra Heights is positioned as a new launch / pre-launch luxury residential opportunity in one of Gurugram’s strongest premium corridors.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What configurations are available? <span class="chev">⌄</span></button>
+          <div class="faq-a"><p>The project is presented with 3 BHK + Utility, 4 BHK and penthouse options to cater to end-users, upgrades and ultra-luxury buyers.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Why should I inquire now? <span class="chev">⌄</span></button>
+          <div class="faq-a"><p>Pre-launch interest often gets access to stronger price positioning, preferred stack selection and better negotiation leverage before broader market traction builds.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can I get brochure and floor plans instantly? <span class="chev">⌄</span></button>
+          <div class="faq-a"><p>Yes. Use the brochure button, the request price CTA, or the callback form to receive project details and arrange a site visit.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-panel reveal">
+        <div>
+          <div class="eyebrow">Final Call to Action</div>
+          <h3 class="serif">Secure a private walkthrough before inventory movement intensifies.</h3>
+          <p>Qualified buyers are encouraged to request pricing, brochure, and a priority callback. This is the moment the landing page must close.</p>
+        </div>
+        <div class="final-actions">
+          <button class="btn gold shine" data-open-modal="leadModal">Request Price</button>
+          <button class="btn" data-open-modal="brochureModal">Download Brochure</button>
+          <a class="btn ghost" href="https://wa.me/919999999999" target="_blank" rel="noopener">WhatsApp Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bottom-bar" id="bottomBar">
+    <button class="btn" data-open-modal="leadModal">Call Back</button>
+    <button class="btn gold" data-open-modal="brochureModal">Brochure</button>
+    <a class="btn" href="https://wa.me/919999999999" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+
+  <button class="floating-whatsapp" id="waBtn" aria-label="WhatsApp Now" title="WhatsApp Now">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M26.4 15.3c0 5.7-4.6 10.3-10.3 10.3-1.8 0-3.6-.5-5.1-1.3l-5.8 1.5 1.6-5.6c-1-1.6-1.6-3.4-1.6-5.4C5.2 9.1 9.8 4.5 15.5 4.5s10.9 4.6 10.9 10.8Z" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M12.3 11.2c.2-.4.5-.4.8-.4h.7c.2 0 .5-.1.8.6.3.7 1 2.2 1.1 2.4.1.2.1.4 0 .6-.2.4-.3.6-.6 1-.1.2-.3.4-.1.8.2.4.7 1.2 1.5 2 .9.9 1.7 1.2 2 1.4.3.1.5.1.7-.1.2-.2.9-1 .1-1.9-.8-.9-1.4-1.4-1.6-1.6-.2-.2-.2-.4 0-.6l.5-.7c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.8-.5h-.6c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.3 0 1.5 1 2.9 1.1 3.1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <div class="modal-backdrop" id="leadModal">
+    <div class="modal">
+      <div class="modal-head">
+        <h4 class="serif">Request Callback</h4>
+        <button class="close" data-close-modal aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--muted); margin-top:0; line-height:1.7">Leave your details to receive pricing, availability, and a priority consultation from our team.</p>
+        <form class="popupForm">
+          <div class="field"><input type="text" name="name" placeholder="Your Name" required></div>
+          <div class="field"><input type="tel" name="phone" placeholder="Mobile Number" required></div>
+          <div class="field"><input type="email" name="email" placeholder="Email Address" required></div>
+          <div class="submit-row">
+            <button class="btn gold shine" type="submit">Get Me the Price</button>
+            <button class="btn" type="button" data-close-modal>Maybe Later</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="brochureModal">
+    <div class="modal">
+      <div class="modal-head">
+        <h4 class="serif">Download Brochure</h4>
+        <button class="close" data-close-modal aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--muted); margin-top:0; line-height:1.7">Enter your contact details and we will share the brochure, plans and key project highlights instantly.</p>
+        <form class="popupForm">
+          <div class="field"><input type="text" name="name" placeholder="Your Name" required></div>
+          <div class="field"><input type="tel" name="phone" placeholder="Mobile Number" required></div>
+          <div class="field"><select name="interest" required><option value="">Interested In</option><option>3 BHK + Utility</option><option>4 BHK</option><option>Penthouse</option></select></div>
+          <div class="submit-row">
+            <button class="btn gold shine" type="submit">Send Brochure</button>
+            <button class="btn" type="button" data-close-modal>Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="exitModal">
+    <div class="modal">
+      <div class="modal-head">
+        <h4 class="serif">Wait — get the private price sheet</h4>
+        <button class="close" data-close-modal aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--muted); margin-top:0; line-height:1.7">Before you leave, secure the brochure, pricing, and preferred inventory details. This launch is designed to reward early enquiries.</p>
+        <form class="popupForm">
+          <div class="field"><input type="text" name="name" placeholder="Your Name" required></div>
+          <div class="field"><input type="tel" name="phone" placeholder="Mobile Number" required></div>
+          <div class="submit-row">
+            <button class="btn gold shine" type="submit">Get Offer Details</button>
+            <button class="btn" type="button" data-close-modal>Not Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Thanks — our team will contact you shortly.</div>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const bottomBar = document.getElementById('bottomBar');
+    const toast = document.getElementById('toast');
+    const heroBg = document.getElementById('heroBg');
+    const leadModal = document.getElementById('leadModal');
+    const brochureModal = document.getElementById('brochureModal');
+    const exitModal = document.getElementById('exitModal');
+    const revealEls = document.querySelectorAll('.reveal');
+    const allModals = [leadModal, brochureModal, exitModal];
+
+    function showToast(message){
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+    }
+
+    function openModal(modal){ modal.style.display = 'grid'; document.body.style.overflow = 'hidden'; }
+    function closeModal(modal){ modal.style.display = 'none'; document.body.style.overflow = ''; }
+
+    document.querySelectorAll('[data-open-modal]').forEach(btn => {
+      btn.addEventListener('click', () => openModal(document.getElementById(btn.dataset.openModal)));
+    });
+    document.querySelectorAll('[data-close-modal]').forEach(btn => {
+      btn.addEventListener('click', () => allModals.forEach(closeModal));
+    });
+    allModals.forEach(modal => {
+      modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(modal); });
+    });
+
+    document.querySelectorAll('.popupForm, #heroForm').forEach(form => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        allModals.forEach(closeModal);
+        form.reset();
+        showToast('Lead captured. The sales team will contact you shortly.');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.14 });
+    revealEls.forEach(el => observer.observe(el));
+
+    const countdownEl = document.getElementById('countdown');
+    const endKey = 'astraOfferEndsAt';
+    let endAt = localStorage.getItem(endKey);
+    if (!endAt) {
+      endAt = String(Date.now() + 48 * 60 * 60 * 1000);
+      localStorage.setItem(endKey, endAt);
+    }
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function updateCountdown(){
+      const diff = Math.max(0, Number(endAt) - Date.now());
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      countdownEl.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    let scrollShown = false;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      navbar.classList.toggle('scrolled', y > 18);
+      if (y > 420) bottomBar.style.display = 'flex';
+      heroBg.style.transform = `scale(1.05) translate3d(0, ${Math.min(y * 0.08, 58)}px, 0)`;
+      if (y > 500) scrollShown = true;
+    }, { passive:true });
+
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-q');
+      btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        faqItems.forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    const wa = document.getElementById('waBtn');
+    wa.addEventListener('click', () => window.open('https://wa.me/919999999999', '_blank', 'noopener'));
+
+    let exitTriggered = false;
+    document.addEventListener('mouseout', (e) => {
+      if (exitTriggered) return;
+      if (!e.relatedTarget && e.clientY <= 0 && window.innerWidth > 768) {
+        exitTriggered = true;
+        openModal(exitModal);
+      }
+    });
+
+    setTimeout(() => {
+      if (!scrollShown && window.innerWidth > 768) {
+        const lead = document.getElementById('leadCard');
+        lead.style.transform = 'translateY(0) scale(1.01)';
+        lead.style.boxShadow = '0 30px 90px rgba(0,0,0,.42)';
+      }
+    }, 2200);
+
+    // smooth anchor fallback for any CTA and to make the page feel polished
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
